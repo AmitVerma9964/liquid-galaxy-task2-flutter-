@@ -5,7 +5,7 @@ import 'controllers/ssh_controller.dart';
 import 'controllers/settings_controller.dart';
 import 'controllers/lg_controller.dart';
 
-import 'screens/home_screen.dart';
+import 'screens/splash_screen.dart';
 import 'theme/app_theme.dart';
 
 void main() async {
@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'LG Controller',
       theme: AppTheme.darkTheme,
-      home: HomeScreen(
+      home: SplashScreen(
         sshController: sshController,
         settingsController: settingsController,
         lgController: lgController,
