@@ -286,11 +286,13 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   _actionTile(
                     icon: Icons.delete_sweep,
                     label: 'Clean All KMLs',
-                    subtitle: 'Clear all KML files from LG',
+                    subtitle: 'Clear all KML files and logo from LG',
                     color: Colors.redAccent,
                     actionKey: 'Clean All KMLs',
                     onTap: () => _runAction(
-                        'Clean All KMLs', widget.lgController.clearKmls),
+                        'Clean All KMLs',
+                        () => widget.lgController
+                            .clearKmls(keepLogos: false)),
                   ),
                   const SizedBox(height: 10),
                   _actionTile(

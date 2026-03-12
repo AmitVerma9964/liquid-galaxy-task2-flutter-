@@ -205,6 +205,8 @@ class LGController {
 
       await Future.delayed(const Duration(milliseconds: 200));
     }
+
+    await forceRefresh();
   }
 
   Future<void> sendLogoToLeftScreen({
